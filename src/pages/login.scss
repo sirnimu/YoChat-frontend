@@ -1,0 +1,125 @@
+.Login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 550px;
+    max-height: 700px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 50px;
+      }
+
+      .brandname {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+    }
+
+    .login-info {
+      width: 80%;
+      margin-bottom: 10vh;
+
+      .header {
+        margin-top: 10vh;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .subheader {
+        margin: 5px 0 25px;
+        font-size: 16px;
+        color: #c5c5c5;
+      }
+
+      form {
+        border-radius: 8px;
+        color: #000;
+
+        label {
+          display: block;
+          margin: 5px 0;
+          font-size: 1rem;
+        }
+
+        input {
+          display: block;
+          width: 100%;
+          padding: 15px 0;
+          margin-bottom: 30px;
+
+          border: 1px solid #c4c4c4;
+          border-radius: 3px;
+          color: #000;
+
+          &:last-of-type {
+            margin-bottom: 50px;
+          }
+        }
+
+        button.primary {
+          width: 100%;
+          padding: 15px 25px;
+          background: #007bff;
+          border: 1px solid #007bff;
+          border-radius: 4px;
+          font-size: 1rem;
+          color: #fff;
+          cursor: pointer;
+          transition: color 0.15s;
+
+          &:hover {
+            background: #016bdb;
+            border: 1px solid #025dbe;
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+
+    footer {
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: #000;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    main {
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+  }
+}

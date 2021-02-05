@@ -1,0 +1,101 @@
+.Chatbox {
+  height: 100%;
+
+  .messages {
+      box-sizing: border-box;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    padding: 25px 50px;
+
+    .message {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .message-user {
+        font-size: 12px;
+        margin: 2px 4px;
+      }
+
+      .message-body {
+        border-radius: 10px;
+        padding: 5px 15px;
+      }
+
+      &::selection {
+        background-color: #eee;
+        color: black;
+      }
+
+      &.current-user {
+        align-items: flex-start;
+
+        .message-body {
+          background-color: #007bff;
+          color: #fff;
+          align-self: flex-start;
+        }
+      }
+
+      &.other-user {
+        align-items: flex-end;
+
+        .message-body {
+          background-color: #eee;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .new-message {
+    position: sticky;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #aaa;
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+
+      .new-message-body {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        box-sizing: border-box;
+        padding: 0 10px;
+        border: none;
+        font-size: 16px;
+
+        &:focus {
+          outline: 1px solid #eee;
+        }
+      }
+
+      .send-message-button {
+        display: block;
+        height: 100%;
+        border: none;
+        color: white;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 0 10px;
+        background-color: #007bff;
+        cursor: pointer;
+
+        &:focus {
+          outline: 1px solid #016cdf;
+        }
+      }
+    }
+  }
+}

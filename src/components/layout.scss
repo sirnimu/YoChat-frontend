@@ -1,0 +1,13 @@
+.Layout {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  background: #fff;
+
+  .Content {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+  }
+}
